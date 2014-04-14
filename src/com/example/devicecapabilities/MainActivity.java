@@ -64,8 +64,10 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 	    if (location != null) {
 	       System.out.println("Provider " + provider + " has been selected.");
 	     } else {
-	       txtLatitude.setText("Location not available");
-	       txtLongitude.setText("Location not available");
+	    	   if (txtLatitude != null && txtLongitude != null) {
+	    		   txtLatitude.setText("Location not available");
+	    		   txtLongitude.setText("Location not available");
+	    	   }
 	     }
 	}
 	
